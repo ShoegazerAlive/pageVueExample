@@ -7,6 +7,11 @@ import Página from '../components/Página';
 import ErrorComponent from '../components/ErrorComponent';
 import Pagina2 from '../components/Pagina2';
 import Movies from '../components/Movies';
+import Search from '../components/Search';
+import Redirect from '../components/Redirect';
+import Article from '../components/Article';
+import CreateArticle from '../components/createArticle';
+import EditArticle from '../components/EditArticle';
 
 
 const routes = [
@@ -57,6 +62,31 @@ const routes = [
     path: "/movies",
     name: 'Movies',
     component: Movies,
+  },
+  {
+    path: "/buscador/:searchString",
+    name: 'Search',
+    component: Search,
+  },
+  {
+    path: "/redirect/:searchString",
+    name: 'Redirect',
+    component: Redirect,
+  },
+  {
+    path: "/articulo/:id",
+    name: 'Article',
+    component: Article,
+  },
+  {
+    path: "/crear-articulo/",
+    name: 'create',
+    component: CreateArticle,
+  },
+  {
+    path: "/editar/:id",
+    name: 'edit',
+    component: EditArticle,
   },
 ]
 

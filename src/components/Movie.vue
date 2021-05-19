@@ -14,7 +14,7 @@
                         }">
                             {{pelicula.year}}
                         </span>
-                        <a href="#">Leer más</a>
+                        <a href="#">{{pelicula.sinopsis}}</a>
 
 
                         <input type="button" value="marcar como favorita"

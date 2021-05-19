@@ -8,7 +8,6 @@
 
 <script>
 import Header from "./components/Header";
-
 import LastArticles from "./components/LastArticles";
 import Footer from './components/Footer';
 

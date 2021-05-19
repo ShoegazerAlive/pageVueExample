@@ -2,14 +2,14 @@
     <aside id="sidebar">
     <div id="nav-blog" class="sidebar-item">
         <h3>Puedes hacer esto</h3>
-        <a href="" @click="redirigirBlog" class="btn btn-success">Crear artículo</a>
+        <router-link to="/crear-articulo/" class="btn btn-success">Crear artículo</router-link>
     </div>
 
     <div id="search" class="sidebar-item">
         <h3>Buscador</h3>
         <p>Encuentra el artículo que buscas</p>
-        <form>
-        <input type="text" name="search" />
+        <form @submit.prevent="goSearch">
+        <input type="text" name="search" v-model="searchString" />
         <input type="submit" name="submit" value="Buscar" class="btn" />
         </form>
         </div>
@@ -20,10 +20,15 @@
 
 export default {
     name: "Sidebar",
+    data(){
+        return {
+            searchString: null
+        }
+    },
 
     methods: {
-        redirigirBlog(){
-            this.$router.push('/blog')
+        goSearch(){
+            this.$router.push('/redirect/'+ this.searchString);
         }
     }
 };
